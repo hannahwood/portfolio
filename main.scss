@@ -1,0 +1,376 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+iframe {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+iframe {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+body {
+    font-family: 'Courier';
+    background-image: url('http://i.imgur.com/2f5OgVi.png');
+    background-size: 100%;
+}
+
+hr {
+    margin: 0 80px;
+}
+
+h1 {
+    font-size: 35pt;
+    font-weight: bold;
+    margin: 60px 0 30px 0;
+    // opacity: 0.8;
+}
+
+h2 {
+    font-size: 25pt;
+    font-family: 'Cedarville Cursive', cursive;
+    // opacity: 0.8;
+}
+
+.small {
+    img {
+        width: 100%;
+    }
+}
+
+.lightbox {
+    /** Default lightbox to hidden */
+    display: none;
+    /** Position and style */
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.lightbox img {
+    /** Pad the lightbox image */
+    width: auto;
+    height: auto;
+    max-height: 90vh;
+    max-width: 90vw;
+    margin-top: 2%;
+}
+
+.lightbox:target {
+    /** Remove default browser outline */
+    outline: none;
+    /** Unhide lightbox **/
+    display: block;
+}
+
+.menu {
+    // background-color: white;
+    top: calc(100vh - 260px);
+    position: fixed;
+    // background-color: white;
+    height: 100%;
+    // box-shadow: 1px 1px 1px gray;
+    // border-right: 2px solid black;
+    .item-holder {
+        // margin: 10vh 0;
+        img {
+            width: 40px;
+            // opacity: 0.7;
+            cursor: pointer;
+            &:hover {
+                // width: 45px;
+            }
+        }
+        .menu-item {
+            padding: 10px 15px;
+        }
+    }
+}
+
+.holder {
+    // margin-left: 30px;
+    .section {
+        // opacity: .8;
+        height: 120vh;
+        // border-bottom: 2px black;
+        .image-div {
+            div {
+                // border: 5px solid black;
+                padding: 10vh 8vw;
+                opacity: 1;
+                h1 {
+                    font-size: 40pt;
+                    font-weight: bold;
+                    margin: 10px 0;
+                }
+                h2 {
+                    // text-shadow: 2px 2px 2px gray;
+                    width: 35vw;
+                    // margin: 30px 0;
+                    // line-height: 1.3;
+                }
+            }
+        }
+    }
+    .one {
+        .image-div {
+            height: 100%;
+            // background-image: url('http://i.imgur.com/5kYpujR.png');
+            background-image: url('http://i.imgur.com/lOZBWyi.png');
+            background-size: 100vw;
+            background-position: top right;
+            background-repeat: no-repeat;
+        }
+    }
+    .two {
+        .category {
+            min-height: 100vh;
+            // width: 15vw;
+            margin: auto;
+            width: 90vw;
+            h1 {
+                // margin: 50px;
+                text-align: center;
+            }
+            // text-align: center;
+        }
+        .art {
+            .flex {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                // width: 90vw;
+                // div {
+                //     margin: auto;
+                //     width: 40vw;
+                //     min-width: 200px;
+                //     margin: 10px auto;
+                //     img {
+                //         width: 100%;
+                //     }
+                //     h3 {
+                //         text-align: center;
+                //         margin: 20px 0;
+                //     }
+                // }
+                // justify-content: center;
+                div {
+                    width: auto;
+                    margin: 10px;
+                    .small {
+                        margin: 0 5px;
+                        $angle-list: 6deg -4deg 3deg 4deg -6deg 2deg -5deg;
+                        @each $current-angle in $angle-list {
+                            $i: index($angle-list, $current-angle);
+                            #img-#{$i} {
+                                transform: rotate($current-angle);
+                            }
+                        }
+                        img {
+                            margin: 8px;
+                            // border: 8px solid black;
+                            // border-width: 12px 12px 45px 12px;
+                            border-radius: 5px;
+                            width: auto;
+                            height: 220px;
+                            // opacity: 0.8;
+                            transition: .2s linear;
+                            box-shadow: 3px 3px 3px gray;
+                            -webkit-filter: grayscale(100%);
+                            filter: grayscale(100%);
+                            &:hover {
+                                opacity: 1;
+                                -webkit-filter: grayscale(0%);
+                                filter: grayscale(0%);
+                                transform: rotate(0deg) !important;
+                                box-shadow: 2px 2px 2px gray;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .code {
+            .flex {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                // width: 90vw;
+                div {
+                    // background-color: white;
+                    // box-shadow: 5px 5px 5px gray;
+                    // border: 5px solid black;
+                    text-align: center;
+                    margin: auto;
+                    width: 40vw;
+                    min-width: 200px;
+                    margin: 10px auto;
+                    img {
+                        width: 100%;
+                        // opacity: 0.8;
+                        transition: .2s linear;
+                        &:hover {
+                            opacity: 1;
+                        }
+                    }
+                    h3 {
+                        text-align: center;
+                        margin: 20px 0;
+                    }
+                }
+            }
+        }
+        .video {
+            .flex {
+                display: flex;
+                // flex-wrap: wrap;
+                flex-flow: row wrap;
+                justify-content: space-around;
+                div {
+                    margin: auto;
+                    width: 40vw;
+                    min-width: 200px;
+                    margin: 10px auto;
+                    img {
+                        width: 100%;
+                        // opacity: 0.8;
+                        transition: .2s linear;
+                        &:hover {
+                            opacity: 1;
+                        }
+                    }
+                    iframe {
+                        box-shadow: 4px 4px 4px gray;
+                        border-radius: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* Medium screens */
+
+@media all and (max-width: 800px) {
+    /* We tell both sidebars to share a row */
+    .holder {
+        margin-left: 0px;
+        padding-top: 60px;
+        .one {
+            .image-div {
+                background-size: 120vh;
+                div {
+                    opacity: 1;
+                    h1 {
+                        margin-top: 70vh;
+                        font-size: 30pt;
+                    }
+                    h2 {
+                        width: 100%;
+                        font-size: 25pt;
+                    }
+                }
+            }
+        }
+        .two {
+            .code {
+                .flex {
+                    div {
+                        width: 80vw;
+                    }
+                }
+            }
+            .video {
+                .flex {
+                    div {
+                        width: 80vw;
+                    }
+                }
+            }
+        }
+    }
+    .menu {
+        z-index: 2;
+        top: 0;
+        height: 60px;
+        width: 100%;
+        background-color: white;
+        border-bottom: 2px solid black;
+        .item-holder {
+            margin: 0;
+            text-align: center;
+            img {
+                width: 25px;
+            }
+            .menu-item {
+                display: inline-block;
+                padding: 15px;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 500px) {
+    .image-div {
+        background-position: 80% 0% !important;
+    }
+    .holder {
+        .two {
+            div {
+                .flex {
+                    div {
+                        width: 80vw;
+                        .small {
+                            img {
+                                width: 75vw !important;
+                                height: auto !important;
+                            }
+                        }
+                    }
+                }
+                // text-align: center;
+            }
+        }
+    }
+}
