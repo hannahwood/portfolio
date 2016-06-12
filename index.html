@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hannah Wood's Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href='https://fonts.googleapis.com/css?family=Dancing+Script|Sacramento|La+Belle+Aurore|Cedarville+Cursive|Dawning+of+a+New+Day' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="menu">
+        <div class="item-holder">
+            <script type="text/javascript">
+            $(document).ready(function() {
+                $("#home").on('click', function(event) {
+                    $('html,body').animate({
+                            scrollTop: $(".one").offset().top
+                        },
+                        'slow');
+                });
+                $("#code").on('click', function(event) {
+                    $('html,body').animate({
+                            scrollTop: $(".code").offset().top
+                        },
+                        'slow');
+                });
+                $("#art").on('click', function(event) {
+                    $('html,body').animate({
+                            scrollTop: $(".art").offset().top
+                        },
+                        'slow');
+                });
+                $("#video").on('click', function(event) {
+                    $('html,body').animate({
+                            scrollTop: $(".video").offset().top
+                        },
+                        'slow');
+                });
+            });
+            </script>
+            <div class="menu-item" id="home"><img src="http://i.imgur.com/dhN8rAA.png"></div>
+            <div class="menu-item" id="code"><img src="http://i.imgur.com/it9stfR.png"></div>
+            <div class="menu-item" id="video"><img src="http://i.imgur.com/w36xSJm.png"></div>
+            <div class="menu-item" id="art"><img src="http://i.imgur.com/BAnvfkJ.png"></div>
+        </div>
+    </div>
+    <div class="holder">
+        <div class="section one">
+            <div class='image-div'>
+                <div class="text">
+                    <!-- <h1>hi,</h1> -->
+                    <h1>i'm hannah,</h1>
+                    <h2>and i'm a full stack web developer and designer living in manhattan.</h2>
+                </div>
+            </div>
+        </div>
+        <div class="section two">
+            <div class="code category">
+                <h1>code.</h1>
+                <div class="flex">
+                    <div>
+                        <img src="http://i.imgur.com/q4lM0Qn.png">
+                        <h3>VIZIT is an educational tool that allows developers to visualize their JavaScript code and analyze the runtimes of relative functions.</h3>
+                        <div class="flex-links">
+                            <a href="http://www.vizit.tech/" onclick="window.open(this.href); return false;" onkeypress="window.open(this.href); return false;">website</a>
+                            <a href="https://github.com/hannahwood/vizit" onclick="window.open(this.href); return false;" onkeypress="window.open(this.href); return false;">github</a>
+                            <a href="https://www.youtube.com/watch?v=jl9om8JCdNk" onclick="window.open(this.href); return false;" onkeypress="window.open(this.href); return false;">presentation</a>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="http://i.imgur.com/q4lM0Qn.png">
+                        <!-- <iframe id="vid-2" src="https://www.youtube.com/embed/tvafAyxkuVk" frameborder="0" allowfullscreen></iframe> -->
+                    </div>
+                </div>
+            </div>
+            <div class="video category">
+                <h1>video.</h1>
+                <div class="flex">
+                    <div>
+                        <img src="http://i.imgur.com/juh57TB.png">
+                        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/sNjGAiOrX-o" frameborder="0" allowfullscreen></iframe> -->
+                    </div>
+                    <div>
+                        <img src="http://i.imgur.com/hNssOak.png">
+                    </div>
+                    <div>
+                    	<img src="http://i.imgur.com/1HUsbQr.png">
+                    </div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="art category">
+                <h1>art.</h1>
+                <div class="flex">
+                    <div>
+                        <!-- thumbnail image wrapped in a link -->
+                        <a href="#img1" class="small">
+                            <img id="img-1" src="http://i.imgur.com/ncbBexA.jpg">
+                        </a>
+                        <!-- lightbox container hidden with CSS -->
+                        <a href="#_" class="lightbox" id="img1">
+                            <img src="http://i.imgur.com/ncbBexA.jpg">
+                        </a>
+                    </div>
+                    <div>
+                        <!-- thumbnail image wrapped in a link -->
+                        <a href="#img2" class="small">
+                            <img id="img-2" src="http://i.imgur.com/FVEvT5Q.jpg">
+                        </a>
+                        <!-- lightbox container hidden with CSS -->
+                        <a href="#_" class="lightbox" id="img2">
+                            <img src="http://i.imgur.com/FVEvT5Q.jpg">
+                        </a>
+                    </div>
+                    <div>
+                        <!-- thumbnail image wrapped in a link -->
+                        <a href="#img3" class="small">
+                            <img id="img-3" src="http://i.imgur.com/6Mo2tJQ.jpg">
+                        </a>
+                        <!-- lightbox container hidden with CSS -->
+                        <a href="#_" class="lightbox" id="img3">
+                            <img src="http://i.imgur.com/6Mo2tJQ.jpg">
+                        </a>
+                    </div>
+                    <div>
+                        <!-- thumbnail image wrapped in a link -->
+                        <a href="#img4" class="small">
+                            <img id="img-4" src="http://i.imgur.com/alSyaCc.jpg">
+                        </a>
+                        <!-- lightbox container hidden with CSS -->
+                        <a href="#_" class="lightbox" id="img4">
+                            <img src="http://i.imgur.com/alSyaCc.jpg">
+                        </a>
+                    </div>
+                    <div>
+                        <!-- thumbnail image wrapped in a link -->
+                        <a href="#img5" class="small">
+                            <img id="img-5" src="http://i.imgur.com/iVIua8O.jpg">
+                        </a>
+                        <!-- lightbox container hidden with CSS -->
+                        <a href="#_" class="lightbox" id="img5">
+                            <img src="http://i.imgur.com/iVIua8O.jpg">
+                        </a>
+                    </div>
+                    <div>
+                        <!-- thumbnail image wrapped in a link -->
+                        <a href="#img6" class="small">
+                            <img id="img-6" src="http://i.imgur.com/OWal39y.jpg">
+                        </a>
+                        <!-- lightbox container hidden with CSS -->
+                        <a href="#_" class="lightbox" id="img6">
+                            <img src="http://i.imgur.com/OWal39y.jpg">
+                        </a>
+                    </div>
+                    <div>
+                        <!-- thumbnail image wrapped in a link -->
+                        <a href="#img7" class="small">
+                            <img id="img-7" src="http://i.imgur.com/JprjlZ3.jpg">
+                        </a>
+                        <!-- lightbox container hidden with CSS -->
+                        <a href="#_" class="lightbox" id="img7">
+                            <img src="http://i.imgur.com/JprjlZ3.jpg">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <hr> -->
+        <!--         <div class="section six">
+            <div class='image-div'>
+                <div>
+                    <h1 onclick="location.href='https://github.com/hannahwood'">social</h1>
+                    <span>
+                	<a href="https://github.com/hannahwood"><img src="https://cdn0.iconfinder.com/data/icons/social-media-and-logos-10-free/32/github_social_media_logo_brand-128.png"></a>
+                	<a href="https://www.instagram.com/hanna.hwood/"><img src="https://cdn0.iconfinder.com/data/icons/social-media-and-logos-10-free/32/instagram_social_media_logo_brand-128.png"></a>
+                	<a href="https://www.linkedin.com/in/hannahkowood"><img src="https://cdn0.iconfinder.com/data/icons/social-media-and-logos-10-free/32/linkedin_social_media_logo_brand-128.png"></a>
+                </span>
+                </div>
+            </div>
+        </div> -->
+    </div>
+</body>
+
+</html>
