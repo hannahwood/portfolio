@@ -134,7 +134,8 @@ a {
     transform: rotate(90deg);
     width: 10px;
     float: right;
-    font-size: 30pt; }
+    font-size: 30pt;
+    font-weight: 700; }
   .holder .two .category .h2-holder {
     display: none; }
 .holder .two .art .flex {
@@ -166,13 +167,13 @@ a {
         width: auto;
         height: 230px;
         transition: .2s linear;
-        box-shadow: 3px 3px 3px gray;
+        box-shadow: -3px 3px 3px gray;
         -webkit-filter: grayscale(100%);
         filter: grayscale(100%); }
         .holder .two .art .flex div .small img:hover {
           opacity: 1;
           transform: rotate(0deg) !important;
-          box-shadow: 2px 2px 2px gray; }
+          box-shadow: -2px 2px 2px gray; }
 .holder .two .code .flex,
 .holder .two .video .flex {
   display: flex;
@@ -214,12 +215,14 @@ a {
 .sharpie {
   text-align: center; }
   .sharpie h3 {
-    font-size: 18pt;
+    font-size: 20pt;
     position: relative;
     top: 150px;
     text-align: center; }
     .sharpie h3 a {
-      transition: .2s linear; }
+      padding: 0 10px;
+      transition: all .2s linear;
+      text-decoration: none; }
       .sharpie h3 a:hover {
         opacity: 0.7; }
   .sharpie img {
@@ -249,6 +252,7 @@ a {
       margin: 20px auto;
       text-align: center; }
       .holder .two .category .h2-holder h2 {
+        font-weight: 700;
         transform: rotate(0deg);
         margin: auto;
         float: initial; }
@@ -271,20 +275,25 @@ a {
         width: 25px; }
       .menu .item-holder .menu-item {
         display: inline-block;
-        padding: 15px; } }
-@media all and (max-width: 500px) {
-  .image-div {
-    background-position: 80% 0% !important; }
-
-  .holder .two div .flex div {
-    width: 80vw; }
-    .holder .two div .flex div .small img {
-      width: 75vw !important;
-      height: auto !important; }
+        padding: 15px; }
 
   .sharpie {
     text-align: center; }
     .sharpie h3 {
+      margin: auto;
+      line-height: 2;
+      width: 93vw;
       top: 0; } }
+@media all and (max-width: 500px) {
+  .image-div {
+    background-position: 80% 0% !important; }
+
+  .holder .section .image-div div h2 {
+    font-size: 20pt; }
+  .holder .two div .flex div {
+    width: 80vw; }
+    .holder .two div .flex div .small img {
+      width: 75vw !important;
+      height: auto !important; } }
 
 /*# sourceMappingURL=main.css.map */
