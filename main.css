@@ -44,8 +44,7 @@ body {
   font-size: 12pt;
   background-image: url("http://i.imgur.com/2f5OgVi.png");
   background-position: top right;
-  background-size: 100%;
-  background-attachment: fixed; }
+  background-size: 100%; }
 
 hr {
   margin: 0 80px; }
