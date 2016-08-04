@@ -297,12 +297,5 @@ a {
     .holder .two div .flex div .small img {
       width: 75vw !important;
       height: auto !important; } }
-@media all and (max-width: 350px) {
-  .holder .two div .code .flex,
-  .holder .two div .video .flex {
-    display: block; }
-    .holder .two div .code .flex .element,
-    .holder .two div .video .flex .element {
-      margin: auto; } }
 
 /*# sourceMappingURL=main.css.map */
