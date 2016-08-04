@@ -189,16 +189,6 @@ a {
     width: 30vw;
     min-width: 300px;
     margin: 10px; }
-    .holder .two .code .flex .element .flex-links,
-    .holder .two .video .flex .element .flex-links {
-      width: 100%; }
-      .holder .two .code .flex .element .flex-links a,
-      .holder .two .video .flex .element .flex-links a {
-        margin: none;
-        transition: .2s linear; }
-        .holder .two .code .flex .element .flex-links a:hover,
-        .holder .two .video .flex .element .flex-links a:hover {
-          opacity: 0.7; }
     .holder .two .code .flex .element img,
     .holder .two .video .flex .element img {
       width: 100%; }
