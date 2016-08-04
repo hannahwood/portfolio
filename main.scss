@@ -389,10 +389,9 @@ a {
     .sharpie {
         text-align: center;
         h3 {
-        margin: auto;
+            margin: auto;
             line-height: 2;
             width: 93vw;
-
             // position: absolute;
             top: 0;
         }
@@ -415,15 +414,20 @@ a {
         }
         .two {
             div {
-                // .code,
-                // .video {
-                //     .flex {
-                //         display: block;
-                //         .element {
-                //             margin: auto;
-                //         }
-                //     }
-                // }
+                .code,
+                .video {
+                    .flex {
+                        div {
+                            width: 80vw;
+                            a {
+                                img {
+                                    width: 75vw !important;
+                                    height: auto !important;
+                                }
+                            }
+                        }
+                    }
+                }
                 .flex {
                     div {
                         width: 80vw;
@@ -436,6 +440,24 @@ a {
                     }
                 }
                 // text-align: center;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 350px) {
+    .holder {
+        .two {
+            div {
+                .code,
+                .video {
+                    .flex {
+                        display: block;
+                        .element {
+                            margin: auto;
+                        }
+                    }
+                }
             }
         }
     }

@@ -285,10 +285,24 @@ a {
 
   .holder .section .image-div div h2 {
     font-size: 20pt; }
+  .holder .two div .code .flex div,
+  .holder .two div .video .flex div {
+    width: 80vw; }
+    .holder .two div .code .flex div a img,
+    .holder .two div .video .flex div a img {
+      width: 75vw !important;
+      height: auto !important; }
   .holder .two div .flex div {
     width: 80vw; }
     .holder .two div .flex div .small img {
       width: 75vw !important;
       height: auto !important; } }
+@media all and (max-width: 350px) {
+  .holder .two div .code .flex,
+  .holder .two div .video .flex {
+    display: block; }
+    .holder .two div .code .flex .element,
+    .holder .two div .video .flex .element {
+      margin: auto; } }
 
 /*# sourceMappingURL=main.css.map */
