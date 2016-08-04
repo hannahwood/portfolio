@@ -182,13 +182,13 @@ a {
 .holder .two .video .flex {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around; }
+  justify-content: center; }
   .holder .two .code .flex .element,
   .holder .two .video .flex .element {
     text-align: center;
     width: 30vw;
     min-width: 300px;
-    margin: 10px; }
+    margin: 20px; }
     .holder .two .code .flex .element img,
     .holder .two .video .flex .element img {
       width: 100%; }
@@ -251,10 +251,6 @@ a {
         transform: rotate(0deg);
         margin: auto;
         float: initial; }
-    .holder .two .code .flex div {
-      width: 80vw; }
-    .holder .two .video .flex div {
-      width: 80vw; }
 
   .menu {
     z-index: 2;
@@ -285,13 +281,6 @@ a {
 
   .holder .section .image-div div h2 {
     font-size: 20pt; }
-  .holder .two div .code .flex div,
-  .holder .two div .video .flex div {
-    width: 80vw; }
-    .holder .two div .code .flex div a img,
-    .holder .two div .video .flex div a img {
-      width: 75vw !important;
-      height: auto !important; }
   .holder .two div .flex div {
     width: 80vw; }
     .holder .two div .flex div .small img {

@@ -234,12 +234,12 @@ a {
             .flex {
                 display: flex;
                 flex-wrap: wrap;
-                justify-content: space-around;
+                justify-content: center;
                 .element {
                     text-align: center;
                     width: 30vw;
                     min-width: 300px;
-                    margin: 10px;
+                    margin: 20px;
                     // .flex-links {
                     //     width: 100%;
                     //     a {
@@ -353,14 +353,14 @@ a {
             .code {
                 .flex {
                     div {
-                        width: 80vw;
+                        // width: 90vw;
                     }
                 }
             }
             .video {
                 .flex {
                     div {
-                        width: 80vw;
+                        // width: 90vw;
                     }
                 }
             }
@@ -414,20 +414,20 @@ a {
         }
         .two {
             div {
-                .code,
-                .video {
-                    .flex {
-                        div {
-                            width: 80vw;
-                            a {
-                                img {
-                                    width: 75vw !important;
-                                    height: auto !important;
-                                }
-                            }
-                        }
-                    }
-                }
+                // .code,
+                // .video {
+                //     .flex {
+                //         div {
+                //             width: 80vw;
+                //             a {
+                //                 img {
+                //                     width: 75vw !important;
+                //                     height: auto !important;
+                //                 }
+                //             }
+                //         }
+                //     }
+                // }
                 .flex {
                     div {
                         width: 80vw;
