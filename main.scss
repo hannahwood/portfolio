@@ -73,6 +73,11 @@ h2 {
 h3 {
     font-size: 14pt;
     font-family: 'Cedarville Cursive', cursive;
+    span {
+        font-family: 'Courier';
+        font-weight: 600;
+        font-size: 12pt;
+    }
 }
 
 a {
@@ -238,6 +243,7 @@ a {
                     .flex-links {
                         width: 100%;
                         a {
+                            // font-weight: 600;
                             margin: none;
                             transition: .2s linear;
                             &:hover {
@@ -277,6 +283,7 @@ a {
         position: relative;
         top: 150px;
         text-align: center;
+        margin: 20px 0;
         // width: 300px;
         a {
             padding: 0 10px;
@@ -365,7 +372,8 @@ a {
         height: 60px;
         width: 100%;
         background-color: white;
-        border-bottom: 2px solid black;
+        // border-bottom: 2px solid black;
+        box-shadow: 2px 0px 4px gray;
         .item-holder {
             margin: 0;
             text-align: center;

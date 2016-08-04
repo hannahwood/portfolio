@@ -58,6 +58,10 @@ h2 {
 h3 {
   font-size: 14pt;
   font-family: 'Cedarville Cursive', cursive; }
+  h3 span {
+    font-family: 'Courier';
+    font-weight: 600;
+    font-size: 12pt; }
 
 a {
   color: black;
@@ -218,7 +222,8 @@ a {
     font-size: 20pt;
     position: relative;
     top: 150px;
-    text-align: center; }
+    text-align: center;
+    margin: 20px 0; }
     .sharpie h3 a {
       padding: 0 10px;
       transition: all .2s linear;
@@ -267,7 +272,7 @@ a {
     height: 60px;
     width: 100%;
     background-color: white;
-    border-bottom: 2px solid black; }
+    box-shadow: 2px 0px 4px gray; }
     .menu .item-holder {
       margin: 0;
       text-align: center; }
