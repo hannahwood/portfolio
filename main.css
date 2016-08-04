@@ -37,17 +37,12 @@ iframe {
   display: block; }
 
 body {
-  line-height: 1; }
-
-body {
+  line-height: 1;
   font-family: 'Courier';
   font-size: 12pt;
   background-image: url("http://i.imgur.com/2f5OgVi.png");
   background-position: top right;
   background-size: 100%; }
-
-hr {
-  margin: 0 80px; }
 
 h1 {
   font-size: 35pt; }
@@ -67,9 +62,6 @@ a {
   color: black;
   margin: 0 5px; }
 
-.small img {
-  width: 100%; }
-
 .lightbox {
   /** Default lightbox to hidden */
   display: none;
@@ -82,14 +74,13 @@ a {
   top: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.8); }
-
-.lightbox img {
-  /** Pad the lightbox image */
-  width: auto;
-  height: auto;
-  max-height: 90vh;
-  max-width: 90vw;
-  margin-top: 2%; }
+  .lightbox img {
+    /** Pad the lightbox image */
+    width: auto;
+    height: auto;
+    max-height: 90vh;
+    max-width: 90vw;
+    margin-top: 2%; }
 
 .lightbox:target {
   /** Remove default browser outline */
@@ -186,16 +177,17 @@ a {
   .holder .two .code .flex .element,
   .holder .two .video .flex .element {
     text-align: center;
-    width: 30vw;
-    min-width: 300px;
     margin: 20px; }
     .holder .two .code .flex .element img,
     .holder .two .video .flex .element img {
-      width: 100%; }
+      width: 35vw;
+      min-width: 200px; }
     .holder .two .code .flex .element h3,
     .holder .two .video .flex .element h3 {
       text-align: center;
-      margin: 10px 0; }
+      width: 35vw;
+      min-width: 200px;
+      margin: auto; }
   .holder .two .code .flex .first,
   .holder .two .video .flex .first {
     transform: rotate(-2deg); }
@@ -225,7 +217,7 @@ a {
     height: 400px; }
 
 /* Medium screens */
-@media all and (max-width: 800px) {
+@media all and (max-width: 1000px) {
   /* We tell both sidebars to share a row */
   .holder {
     margin-left: 0px;
@@ -275,7 +267,7 @@ a {
       line-height: 2;
       width: 93vw;
       top: 0; } }
-@media all and (max-width: 500px) {
+@media all and (max-width: 700px) {
   .image-div {
     background-position: 80% 0% !important; }
 
@@ -285,6 +277,17 @@ a {
     width: 80vw; }
     .holder .two div .flex div .small img {
       width: 75vw !important;
-      height: auto !important; } }
+      height: auto !important; }
+  .holder .two .code .flex .element img,
+  .holder .two .video .flex .element img {
+    width: 70vw;
+    min-width: 100px; }
+  .holder .two .code .flex .element h3,
+  .holder .two .video .flex .element h3 {
+    text-align: center;
+    width: 70vw;
+    min-width: 100px;
+    max-width: 500px;
+    margin: auto; } }
 
 /*# sourceMappingURL=main.css.map */
