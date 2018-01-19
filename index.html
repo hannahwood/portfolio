@@ -8,39 +8,12 @@
     <link rel='shortcut icon' href='./static/favicon.jpg' type='image/x-icon'/ >
     <link href='https://fonts.googleapis.com/css?family=Dancing+Script|Sacramento|La+Belle+Aurore|Cedarville+Cursive|Dawning+of+a+New+Day' rel='stylesheet' type='text/css' />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="main.js"></script>
 </head>
 
 <body>
     <div class="menu">
         <div class="item-holder">
-            <script type="text/javascript">
-            $(document).ready(function() {
-                $("#home").on('click', function(event) {
-                    $('html,body').animate({
-                            scrollTop: $(".one").offset().top - 60
-                        },
-                        'slow');
-                });
-                $("#code").on('click', function(event) {
-                    $('html,body').animate({
-                            scrollTop: $(".code").offset().top - 30
-                        },
-                        'slow');
-                });
-                $("#art").on('click', function(event) {
-                    $('html,body').animate({
-                            scrollTop: $(".art").offset().top - 30
-                        },
-                        'slow');
-                });
-                $("#video").on('click', function(event) {
-                    $('html,body').animate({
-                            scrollTop: $(".video").offset().top - 30
-                        },
-                        'slow');
-                });
-            });
-            </script>
             <div class="menu-item" id="home"><img src="http://i.imgur.com/dhN8rAA.png"></div>
             <div class="menu-item" id="code"><img src="http://i.imgur.com/it9stfR.png"></div>
             <div class="menu-item" id="video"><img src="http://i.imgur.com/w36xSJm.png"></div>
@@ -51,7 +24,6 @@
         <div class="section one">
             <div class='image-div'>
                 <div class="text">
-                    <!-- <h1>hi,</h1> -->
                     <h1>hi i'm hannah,</h1>
                     <h2>and i'm a full stack web developer and designer living in manhattan.</h2>
                 </div>
@@ -105,82 +77,97 @@
                 <h2 class="vertical-h2">art.</h2>
                 <div class="flex">
                     <div>
-                        <!-- thumbnail image wrapped in a link -->
                         <a href="#img1" class="small">
                             <img id="img-1" src="http://i.imgur.com/ncbBexA.jpg">
                         </a>
-                        <!-- lightbox container hidden with CSS -->
                         <a href="#_" class="lightbox" id="img1">
                             <img src="http://i.imgur.com/ncbBexA.jpg">
                         </a>
                     </div>
-                    <div>
-                        <!-- thumbnail image wrapped in a link -->
+<!--                     <div>
                         <a href="#img2" class="small">
                             <img id="img-2" src="http://i.imgur.com/FVEvT5Q.jpg">
                         </a>
-                        <!-- lightbox container hidden with CSS -->
                         <a href="#_" class="lightbox" id="img2">
                             <img src="http://i.imgur.com/FVEvT5Q.jpg">
                         </a>
-                    </div>
+                    </div> -->
                     <div>
-                        <!-- thumbnail image wrapped in a link -->
                         <a href="#img3" class="small">
                             <img id="img-3" src="http://i.imgur.com/6Mo2tJQ.jpg">
                         </a>
-                        <!-- lightbox container hidden with CSS -->
                         <a href="#_" class="lightbox" id="img3">
                             <img src="http://i.imgur.com/6Mo2tJQ.jpg">
                         </a>
                     </div>
                     <div>
-                        <!-- thumbnail image wrapped in a link -->
                         <a href="#img4" class="small">
                             <img id="img-4" src="http://i.imgur.com/alSyaCc.jpg">
                         </a>
-                        <!-- lightbox container hidden with CSS -->
                         <a href="#_" class="lightbox" id="img4">
                             <img src="http://i.imgur.com/alSyaCc.jpg">
                         </a>
                     </div>
                     <div>
-                        <!-- thumbnail image wrapped in a link -->
-                        <a href="#img5" class="small">
-                            <img id="img-5" src="http://i.imgur.com/iVIua8O.jpg">
-                        </a>
-                        <!-- lightbox container hidden with CSS -->
-                        <a href="#_" class="lightbox" id="img5">
-                            <img src="http://i.imgur.com/iVIua8O.jpg">
-                        </a>
-                    </div>
-                    <div>
-                        <!-- thumbnail image wrapped in a link -->
                         <a href="#img6" class="small">
                             <img id="img-6" src="http://i.imgur.com/OWal39y.jpg">
                         </a>
-                        <!-- lightbox container hidden with CSS -->
                         <a href="#_" class="lightbox" id="img6">
                             <img src="http://i.imgur.com/OWal39y.jpg">
                         </a>
                     </div>
                     <div>
-                        <!-- thumbnail image wrapped in a link -->
+                        <a href="#img11" class="small">
+                            <img id="img-11" src="https://imgur.com/vr1xZ3M.jpg">
+                        </a>
+                        <a href="#_" class="lightbox" id="img11">
+                            <img src="https://imgur.com/vr1xZ3M.jpg">
+                        </a>
+                    </div>
+                    <div>
                         <a href="#img7" class="small">
                             <img id="img-7" src="http://i.imgur.com/JprjlZ3.jpg">
                         </a>
-                        <!-- lightbox container hidden with CSS -->
                         <a href="#_" class="lightbox" id="img7">
                             <img src="http://i.imgur.com/JprjlZ3.jpg">
                         </a>
                     </div>
+                    <div>
+                        <a href="#img5" class="small">
+                            <img id="img-5" src="http://i.imgur.com/iVIua8O.jpg">
+                        </a>
+                        <a href="#_" class="lightbox" id="img5">
+                            <img src="http://i.imgur.com/iVIua8O.jpg">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#img8" class="small">
+                            <img id="img-8" src="https://i.imgur.com/XNvs1Hj.jpg">
+                        </a>
+                        <a href="#_" class="lightbox" id="img8">
+                            <img src="https://i.imgur.com/XNvs1Hj.jpg">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#img9" class="small">
+                            <img id="img-9" src="https://i.imgur.com/Pz7Z5LG.jpg">
+                        </a>
+                        <a href="#_" class="lightbox" id="img9">
+                            <img src="https://i.imgur.com/Pz7Z5LG.jpg">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#img10" class="small">
+                            <img id="img-10" src="https://imgur.com/rRCtmoi.jpg">
+                        </a>
+                        <a href="#_" class="lightbox" id="img10">
+                            <img src="https://imgur.com/rRCtmoi.jpg">
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div>
-                <!-- <h3>sdjncdsk sdkjcnskd sdkfnj</h3> -->
-            </div>
             <div class="sharpie">
-                <h3><a href="./static/resume.pdf" target="_blank">Resume</a> <a href="https://github.com/hannahwood" target="_blank">Github</a> <a href="https://www.linkedin.com/in/hannahkowood" target="_blank">Linkedin</a></h3>
+                <h3><a href="./static/resume-hannahwood-01-2018.pdf"  target="_blank">Resume</a> <a href="https://github.com/hannahwood" target="_blank">Github</a> <a href="https://www.linkedin.com/in/hannahkowood" target="_blank">Linkedin</a></h3>
                 <h3>   <a href="https://www.instagram.com/hanna.hwood/" target="_blank">Instagram</a>   <a href="https://www.behance.net/hannahkowood" target="_blank">Behance</a> </h3>
                 <img src="http://i.imgur.com/SzgsLK5.png">
             </div>
