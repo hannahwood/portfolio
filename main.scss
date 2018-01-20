@@ -44,7 +44,7 @@ body {
     line-height: 1;
     font-family: 'Courier';
     font-size: 12pt;
-    background-image: url('http://i.imgur.com/2f5OgVi.png');
+    background-image: url('./static/images/paper-background-min.png');
     background-position: top right;
     background-size: 100%;
 }
@@ -176,7 +176,7 @@ a {
                     margin: 10px;
                     .small {
                         margin: 0 5px;
-                        $angle-list: 5deg -3deg 3deg 4deg -5deg 2deg -4deg;
+                        $angle-list: 5deg -3deg 3deg 4deg -5deg 2deg -4deg -2.5deg 3.5deg 4.5deg -1deg;
                         @each $current-angle in $angle-list {
                             $i: index($angle-list, $current-angle);
                             #img-#{$i} {
