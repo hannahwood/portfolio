@@ -40,7 +40,7 @@ body {
   line-height: 1;
   font-family: 'Courier';
   font-size: 12pt;
-  background-image: url("http://i.imgur.com/2f5OgVi.png");
+  background-image: url("./static/images/paper-background-min.png");
   background-position: top right;
   background-size: 100%; }
 
@@ -156,6 +156,14 @@ a {
         transform: rotate(2deg); }
       .holder .two .art .flex div .small #img-7 {
         transform: rotate(-4deg); }
+      .holder .two .art .flex div .small #img-8 {
+        transform: rotate(-2.5deg); }
+      .holder .two .art .flex div .small #img-9 {
+        transform: rotate(3.5deg); }
+      .holder .two .art .flex div .small #img-10 {
+        transform: rotate(4.5deg); }
+      .holder .two .art .flex div .small #img-11 {
+        transform: rotate(-1deg); }
       .holder .two .art .flex div .small img {
         margin: 8px;
         border-radius: 5px;
