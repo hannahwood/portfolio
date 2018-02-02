@@ -1,170 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="portfolio">
 
 <head>
-    <title>Hannah Wood's Portfolio</title>
-    <link rel="stylesheet" type="text/css" href="main.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel='shortcut icon' href='./static/favicon.jpg' type='image/x-icon'/ >
-    <link href='https://fonts.googleapis.com/css?family=Dancing+Script|Sacramento|La+Belle+Aurore|Cedarville+Cursive|Dawning+of+a+New+Day' rel='stylesheet' type='text/css' />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-    <script src="main.js"></script>
+  <title>Hannah Wood's Portfolio</title>
+  <link rel="stylesheet" type="text/css" href="main.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel='shortcut icon' href='./static/favicon.jpg' type='image/x-icon' />
+  <link href='https://fonts.googleapis.com/css?family=Cedarville+Cursive' rel='stylesheet' type='text/css' />
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+  <script src="main.js"></script>
 </head>
 
 <body>
+  <div ng-controller="PortfolioController as PortCtrl">
     <div class="menu">
-        <div class="item-holder">
-            <div class="menu-item" id="home"><img src="http://i.imgur.com/dhN8rAA.png"></div>
-            <div class="menu-item" id="code"><img src="http://i.imgur.com/it9stfR.png"></div>
-            <div class="menu-item" id="video"><img src="http://i.imgur.com/w36xSJm.png"></div>
-            <div class="menu-item" id="art"><img src="http://i.imgur.com/BAnvfkJ.png"></div>
+      <div class="item-holder">
+        <div class="menu-item" ng-repeat="item in PortCtrl.menuItems" id="{{ item.id }}" ng-click="gotoElement(item.id + '-section')">
+          <img src="{{ item.img_src }}">
         </div>
+      </div>
     </div>
-    <div class="holder">
-        <div class="section one">
-            <div class='image-div'>
-                <div class="text">
-                    <h1>hi i'm hannah,</h1>
-                    <h2>and i'm a software developer and designer living in manhattan.</h2>
-                </div>
-            </div>
+    <div class="container">
+      <div class="section one" id="home-section">
+        <div class='image-div'>
+          <div class="text">
+            <h1>hi i'm hannah,</h1>
+            <h2>and i'm a software developer and designer living in manhattan.</h2>
+          </div>
         </div>
-        <div class="section two">
-            <div class="code category">
-                <div class="h2-holder">
-                    <h2>code.</h2>
-                </div>
-                <h2 class="vertical-h2">code.</h2>
-                <div class="flex">
-                    <div class="element first">
-                        <a href="http://www.vizit.tech/" target="_blank"><img src="http://i.imgur.com/q4lM0Qn.png"></a>
-                        <h3>Using the mean stack, a team of three developers and I created <a href="http://www.vizit.tech/" target="_blank"><span>Vizit:</span></a> an educational tool that allows developers to visualize their JavaScript code. Visit our <a href="https://github.com/hannahwood/vizit" target="_blank"><span>github</span></a> and watch our <a href="https://www.youtube.com/watch?v=jl9om8JCdNk" target="_blank"><span>presentation</span>.</a></h3>
-                    </div>
-                    <div class="element second">
-                        <img src="http://i.imgur.com/3pzPo0G.png">
-                        <h3>At Fullstack Academy, I work as an engineer on <span>LearnDot</span>, the internal learning platform for students. </h3>
-                    </div>
-                    <div class="element third">
-                        <a href="http://www.fullstackacademy.com" target="_blank"><img src="http://i.imgur.com/avkg57I.png"></a>
-                        <h3>I also contribute to the design of Fullstack Academy's <a href="http://www.fullstackacademy.com" target="_blank"><span>marketing site</span>.</a></h3>
-                    </div>
-                </div>
+      </div>
+      <div class="section two">
+        <div class="code category" id="code-section">
+          <div class="h2-holder">
+            <h2>code/design.</h2>
+          </div>
+          <div class="flex">
+            <div ng-repeat="image in PortCtrl.codeImages" class="element div-{{ $index+1 }}">
+              <a href="{{ image.href }}" target="_blank"><img src="{{ image.img_src }}"></a>
+              <h4 ng-bind-html=image.text></h4>
             </div>
-            <div class="video category">
-                <div class="h2-holder">
-                    <h2>video.</h2>
-                </div>
-                <h2 class="vertical-h2">video.</h2>
-                <div class="flex">
-                    <div class="element second">
-                        <a href="https://www.youtube.com/watch?v=sNjGAiOrX-o" target="_blank" "><img src="http://i.imgur.com/juh57TB.png"></a>
-                        <h3>I scripted, shot, and edited this promotional video for <a href="https://www.youtube.com/watch?v=sNjGAiOrX-o" target="_blank"><span>MIT App Inventor</span></a>, a blocks-based programming tool for kids.</h3>
-                    </div>
-                    <div class="element first">
-                        <a href="https://www.youtube.com/watch?v=5aj6vSKq4Eo" target="_blank"><img src="http://i.imgur.com/hNssOak.png"></a>
-                        <h3><a href="https://www.youtube.com/watch?v=5aj6vSKq4Eo" target="_blank"><span>Life of Non-STEM Majors at MIT</span></a> is a piece I created to highlight some of the school's few students in the less popular departments.</h3>
-                    </div>
-                    <div class="element third">
-                        <a href="https://www.youtube.com/watch?v=XolD6TV27Kk" target="_blank"><img src="http://i.imgur.com/1HUsbQr.png"></a>
-                        <h3>While working for Codeword, I created <a href="https://www.youtube.com/watch?v=XolD6TV27Kk" target="_blank"><span>Bikeyard</span></a> to promote a local mobile bike cooperative.</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="art category">
-                <div class="h2-holder">
-                    <h2>art.</h2>
-                </div>
-                <h2 class="vertical-h2">art.</h2>
-                <div class="flex">
-                    <div>
-                        <a href="#img2" class="small">
-                            <img id="img-2" src="./static/images/drawing-selfie.jpg">
-                        </a>
-                        <a href="#_" class="lightbox" id="img2">
-                            <img src="./static/images/drawing-selfie.jpg">
-                        </a>
-                    </div>
-                    <div>
-                        <a href="#img3" class="small">
-                            <img id="img-3" src="./static/images/painting-alien.jpg">
-                        </a>
-                        <a href="#_" class="lightbox" id="img3">
-                            <img src="./static/images/painting-alien.jpg">
-                        </a>
-                    </div>
-                    <div>
-                        <a href="#img1" class="small">
-                            <img id="img-1" src="./static/images/drawing-hathaway.jpg">
-                        </a>
-                        <a href="#_" class="lightbox" id="img1">
-                            <img src="./static/images/drawing-hathaway.jpg">
-                        </a>
-                    </div>
-                    <div>
-                        <a href="#img4" class="small">
-                            <img id="img-4" src="./static/images/drawing-matt.jpg">
-                        </a>
-                        <a href="#_" class="lightbox" id="img4">
-                            <img src="./static/images/drawing-matt.jpg">
-                        </a>
-                    </div>
-                    <div>
-                        <a href="#img6" class="small">
-                            <img id="img-6" src="./static/images/painting-self.jpg">
-                        </a>
-                        <a href="#_" class="lightbox" id="img6">
-                            <img src="./static/images/painting-self.jpg">
-                        </a>
-                    </div>
-                    <div>
-                        <a href="#img11" class="small">
-                            <img id="img-11" src="./static/images/painting-bald.jpg">
-                        </a>
-                        <a href="#_" class="lightbox" id="img11">
-                            <img src="./static/images/painting-bald.jpg">
-                        </a>
-                    </div>
-                    <div>
-                        <a href="#img7" class="small">
-                            <img id="img-7" src="./static/images/drawing-thile.jpg">
-                        </a>
-                        <a href="#_" class="lightbox" id="img7">
-                            <img src="./static/images/drawing-thile.jpg">
-                        </a>
-                    </div>
-                    <div>
-                        <a href="#img5" class="small">
-                            <img id="img-5" src="./static/images/painting-matt.jpg">
-                        </a>
-                        <a href="#_" class="lightbox" id="img5">
-                            <img src="./static/images/painting-matt.jpg">
-                        </a>
-                    </div>
-                    <div>
-                        <a href="#img8" class="small">
-                            <img id="img-8" src="./static/images/drawing-couple.jpg">
-                        </a>
-                        <a href="#_" class="lightbox" id="img8">
-                            <img src="./static/images/drawing-couple.jpg">
-                        </a>
-                    </div>
-                    <div>
-                        <a href="#img9" class="small">
-                            <img id="img-9" src="./static/images/drawing-man.jpg">
-                        </a>
-                        <a href="#_" class="lightbox" id="img9">
-                            <img src="./static/images/drawing-man.jpg">
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="sharpie">
-                <h3><a href="./static/resume-hannahwood-01-2018.pdf"  target="_blank">Resume</a> <a href="https://github.com/hannahwood" target="_blank">Github</a> <a href="https://www.linkedin.com/in/hannahkowood" target="_blank">Linkedin</a></h3>
-                <h3>   <a href="https://www.instagram.com/hanna.hwood/" target="_blank">Instagram</a>   <a href="https://www.behance.net/hannahkowood" target="_blank">Behance</a> </h3>
-                <img src="http://i.imgur.com/SzgsLK5.png">
-            </div>
+          </div>
         </div>
+        <div class="art category" id="art-section">
+          <div class="h2-holder">
+            <h2>art.</h2>
+          </div>
+          <div class="flex">
+            <div ng-repeat="image in PortCtrl.artImages">
+              <a href="#img{{ $index+1 }}" class="small"><img id="img-{{ $index+1 }}" src="{{ image.img_src }}"></a>
+              <a href="#_" class="lightbox" id="!#img{{ $index+1 }}"><img src="{{ image.img_src }}"></a>
+            </div>
+          </div>
+        </div>
+        <div class="video category" id="video-section">
+          <div class="h2-holder">
+            <h2>video.</h2>
+          </div>
+          <div class="flex">
+            <div ng-repeat="image in PortCtrl.videoImages" class="element div-{{ $index+1 }}">
+              <a href="https://www.youtube.com/watch?v=sNjGAiOrX-o" target="_blank" "><img src="{{ image.img_src }}"/></a>
+              <h4 ng-bind-html=image.text></h4>
+            </div>
+          </div>
+        </div>
+        <div class="contact-info">
+          <div class="links">
+            <div ng-repeat="link in PortCtrl.contactInfo">
+              <a href="{{ link.href }}"  target="_blank ">{{ link.label }}</a>
+            </div>
+          </div>
+          <img src="http://i.imgur.com/SzgsLK5.png ">
+        </div>
+      </div>
     </div>
+  </div>
 </body>
 
 </html>
